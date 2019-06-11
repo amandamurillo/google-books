@@ -21,7 +21,6 @@ state = {
             </Jumbotron>
           </Col>
           <Col size="md-12">
-            {/* /card for book search */}
                 {/* /form for search */}
 
           </Col>
