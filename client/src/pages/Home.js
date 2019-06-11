@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
+import List from "../components/List";
 import Card from "../components/Card";
 import Form from "../components/Form";
 import API from "../utils/API";
+import Book from "../components/Book";
 
 
 class Home extends Component {
 
   state = {
-  //books
+    books:[],
     q: "",
-  //message 
-  }
+    message: "Search for a book to begin!"
+  };
 
   //handleInputChange
   handleInputChange = event => {
@@ -63,7 +65,6 @@ class Home extends Component {
                 handleFormSubmit={this.handleFormSubmit}
                 q={this.state.q}
               />
-
             </Card>
           </Col>
         </Row>
@@ -71,6 +72,32 @@ class Home extends Component {
         <Row>
           <Col size="md-12">
             <Card title="Results">
+            {this.state.books.length ?  (
+              <List>
+                {this.state.books.map(book => (
+                  <Book
+                    key={book.id}
+                    title={book.volumeInfo.title}
+                    subtitle={book.volumeInfo.subtitle}
+                    link={book.volumeInfo.infoLink}
+                    authors={book.volumeInfo.authors.join(",")}
+                    description={book.volumeInfo.description}
+                    image={book.volumeInfo.imageLinks.thumbnail}
+                    Button={() => (
+                      <button
+                        onClick= {() => this.handleBookSave(book.id)}
+                        className= "btn btn-primary ml-2"
+                        >
+                        Save
+                        </button>
+                    )}
+                  />
+                ))}
+              </List>
+
+            ) : (
+              <h2 className="text-center">{this.state.message}</h2>
+            )}
        {/* if results, return List > Book */}
         {/* else return a please search message */}
             </Card>
