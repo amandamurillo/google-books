@@ -1,5 +1,5 @@
 import React from "react";
-import ListItem from "../List";
+import { ListItem } from "../Lists";
 import { Row, Col } from "../Grid";
 import "./style.css";
 

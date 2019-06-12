@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style.css";
 
+
  const List = ({ children }) => (
     <ul className="list-group">
         {children}
@@ -11,4 +12,5 @@ import "./style.css";
     return <li className="list-group-item">{children}</li>;
 }
 
-export default { List, ListItem };
+
+export { List, ListItem };

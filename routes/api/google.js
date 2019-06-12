@@ -1,4 +1,4 @@
-const router = requrie("express").Router();
+const router = require("express").Router();
 const googleController = require("../../controllers/googleController");
 
 //matches with "/api/google"
