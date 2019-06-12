@@ -18,13 +18,14 @@ app.use(routes);
 
 //database
 
-var databaseUri = "mongodb://localhost/googlebooks"
-
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI)
-} else {
-  mongoose.connect(databaseUri)
-}
+const mongoURL = process.env.PROD_MONGODB || "mongodb://localhost:27017/googlebooks"
+mongoose.connect(mongoURL, {useNewUrlParser: true})
+  .then(() => {
+    console.log("🗄 ==> Successfully connected to mongoDB.");
+  })
+  .catch((err) => {
+    console.log(`Error connecting to mongoDB: ${err}`);
+  });
 
 // var db = mongoose.connection;
 
