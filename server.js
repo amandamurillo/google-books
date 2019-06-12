@@ -25,26 +25,6 @@ mongoose.connect(
 
 app.use(routes);
 
-//database
-
-// const databaseUri = "mongodb://localhost:27017/googlebooks";
-
-// if (process.env.MONGODB_URI) {
-
-//   mongoose.connect(process.env.MONGODB_URI)
-// } else {
-//   mongoose.connect(databaseUri)
-// }
-
-// const db = mongoose.connection;
-
-// db.on('error', function(err){
-//   console.log("Mongoose error : ", err)
-// })
-
-// db.once('open', function(err){
-//   console.log("Mongoose connection sucessful!")
-// });
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
