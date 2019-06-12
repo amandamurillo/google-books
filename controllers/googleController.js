@@ -23,7 +23,7 @@ module.exports = {
             result.volumeInfo.imageLinks &&
             result.volumeInfo.imageLinks.thumbnail
         )
-      )
+      , () =>{console.log ("got it")})
       .then(apiBooks =>
         db.Book.find().then(dbBooks =>
           apiBooks.filter(apiBook =>

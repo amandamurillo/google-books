@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
-import List from "../components/Lists";
+import { List } from "../components/List";
 import Card from "../components/Card";
 import Form from "../components/Form";
 import Book from "../components/Book";
