@@ -1,9 +1,8 @@
 
 <p align="center">
-    <img src="#" alt="google-books" width=150 height=150>
-  </a>
-  <h3 align="center">Google Books</h3>
-
+    
+<img width="534" alt="google-books" src="https://user-images.githubusercontent.com/40437294/59521425-1a056f80-8e81-11e9-8935-4453f55ce0ad.png">
+  
   <p align="center">
     Google Books is a react app that uses Google Books API to let users search for books and save books <br>
     <br>
