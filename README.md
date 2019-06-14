@@ -6,7 +6,6 @@
   <p align="center">
     Google Books is a react app that uses Google Books API to let users search for books and save books to their to-be-read list.
     <br>
-    <br>
     </p>
 </p>
 
