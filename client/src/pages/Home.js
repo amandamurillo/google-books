@@ -8,7 +8,6 @@ import Book from "../components/Book";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 
-
 class Home extends Component {
   state = {
     books:[],
@@ -116,7 +115,6 @@ class Home extends Component {
         </Row>
         <Footer />
       </Container>
-
         );
     }
 }
