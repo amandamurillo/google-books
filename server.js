@@ -26,9 +26,13 @@ mongoose.connect(
 app.use(routes);
 
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
 
+var server = app.listen(process.env.PORT || 5000, function () {
+  var port = server.address().port;
+  console.log("Express is working on port " + port);
+});
 
 
